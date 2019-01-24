@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from  OSC_example import OSCMessenger
 import skimage.measure
+from pynput.keyboard import Key, Listener
 
 messenger = OSCMessenger()
 env = gym.make('ChromeDino-v0')
@@ -14,12 +15,10 @@ freq = 0
 action = 0
 first = []
 
-from pynput.keyboard import Key, Listener
-
 def on_press(key):
     if Key.space==key:
         action = 1
-        messenger.send_io_message(first.reshape(-1),action+1)
+        messenger.send_io_message(pooled_img.reshape(-1),int(action))
     print '{0} pressed'.format(
         key) 
 
@@ -40,9 +39,12 @@ with Listener(
             env.reset()
         observation, reward, done, info = env.step(action)
         first = np.array(observation).reshape(80,160)
-        pooled_img = skimage.measure.block_reduce(first, (20,20), np.max)
+        pooled_img = skimage.measure.block_reduce(first, (6,6), np.max)
         freq+=1
-        print action,type(action)
         if freq%5==0:
-            messenger.send_io_message(first.reshape(-1)[0],action+1)
+            print(pooled_img.reshape(-1)) #378
+            plt.imshow(pooled_img,interpolation="gaussian")
+            plt.show()
+            plt.close()
+            messenger.send_io_message(list(pooled_img.reshape(-1)),action+0.0)
     listener.join()

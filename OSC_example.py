@@ -14,12 +14,25 @@ class OSCMessenger:
                 self.input_client.connect(self.in_address)
                 self.output_client.connect(self.out_address)
 
-        def send_io_message(self,inp,out):
+        def send_io_message(self,inp,output):
+                # in_msg = OSC.OSCMessage(self.input_channel)
+                # in_msg.append(inp)
+                # self.input_client.send(in_msg)
+                # out_msg = OSC.OSCMessage(self.output_channel)
+                # out_msg.append(output)
+                # self.output_client.send(out_msg)
+                # self.send_output(output)
+                self.send_input(inp)
+                
+        
+        def send_input(self,input):
                 in_msg = OSC.OSCMessage(self.input_channel)
-                in_msg.append(inp)
+                in_msg.append(input)
                 self.input_client.send(in_msg)
+        
+        def send_output(self,output):
                 out_msg = OSC.OSCMessage(self.output_channel)
-                out_msg.append(out)
+                out_msg.append(output)
                 self.output_client.send(out_msg)
 
         def __del__(self):
