@@ -3,9 +3,9 @@ import OSC
 class OSCMessenger:
         def __init__(self):
                 self.in_address = '127.0.0.1', 6448
-                self.out_address = '127.0.0.1', 12000
+                self.out_address = '127.0.0.1', 6448
                 self.input_channel = '/wek/inputs'
-                self.output_channel = '/wek/outputs'
+                self.output_channel = '/wekinator/control/outputs'
                 self.input_client = OSC.OSCClient()
                 self.output_client = OSC.OSCClient()
                 self._connect()
@@ -21,7 +21,7 @@ class OSCMessenger:
                 # out_msg = OSC.OSCMessage(self.output_channel)
                 # out_msg.append(output)
                 # self.output_client.send(out_msg)
-                # self.send_output(output)
+                self.send_output(output)
                 self.send_input(inp)
                 
         
