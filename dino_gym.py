@@ -7,6 +7,7 @@ from  OSC_example import OSCMessenger
 import skimage.measure
 from pynput.keyboard import Key, Listener
 import cv2
+from scipy.interpolate import interp1d
 
 messenger = OSCMessenger()
 env = gym.make('ChromeDino-v0')
@@ -38,14 +39,18 @@ with Listener(
             print "Done Score",score
             env.reset()
         observation, reward, done, info = env.step(action)
-        first = np.array(observation).reshape(80,160)
+        first = 255-np.array(observation,np.float32).reshape(80,160)
         pooled_img = skimage.measure.block_reduce(first, (6,6), np.max)
+        # plt.imshow(pooled_img,interpolation="gaussian")
+        # plt.show("frame.jpg")
         freq += 1
-        print pooled_img.shape
-        cv2.imshow("features",pooled_img.reshape(14,27,1))
-        cv2.destroyAllWindows()
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            cv2.destroyAllWindows()
-        if freq%20 == 0:
+        # print pooled_img[np.where(pooled_img!=0)]
+        # cv2.imshow("features"+str(freq),pooled_img)
+        # input()
+        # cv2.destroyAllWindows()
+        # if cv2.waitKey(1) & 0xFF == ord('q'):
+        #     cv2.destroyAllWindows()
+        # if freq%5 == 0:
+        if freq%4==0:
             messenger.send_io_message(list(pooled_img.reshape(-1)),action+1.0)
     listener.join()
