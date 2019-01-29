@@ -54,7 +54,7 @@ def each_frame():
 # simulate a "game engine"
 while run:
     # do the game stuff:
-    sleep(1)
+#     sleep(1)
     # call user script
     each_frame()
 

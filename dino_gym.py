@@ -40,17 +40,12 @@ with Listener(
             env.reset()
         observation, reward, done, info = env.step(action)
         first = 255-np.array(observation,np.float32).reshape(80,160)
+        first = first[:,:80]
         pooled_img = skimage.measure.block_reduce(first, (6,6), np.max)
         # plt.imshow(pooled_img,interpolation="gaussian")
         # plt.show("frame.jpg")
+        # print pooled_img.shape
         freq += 1
-        # print pooled_img[np.where(pooled_img!=0)]
-        # cv2.imshow("features"+str(freq),pooled_img)
-        # input()
-        # cv2.destroyAllWindows()
-        # if cv2.waitKey(1) & 0xFF == ord('q'):
-        #     cv2.destroyAllWindows()
-        # if freq%5 == 0:
-        if freq%4==0:
+        if freq%3==0:
             messenger.send_io_message(list(pooled_img.reshape(-1)),action+1.0)
     listener.join()
