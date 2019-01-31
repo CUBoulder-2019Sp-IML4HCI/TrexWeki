@@ -53,7 +53,7 @@ Copy chrome driver and paste it in the root directory of the project named `chro
 * Open wekinator and open an existing project. Select `data/bestmodel/MyTrex2.wekproj` from the data directory of the project.
 * In your terminal, with root directory of the project `python dino_gym.py`.
 * In wekinator, click on `Start Recording`
-* Collect around 500 $\pm$ 50  recording samples.
+* Collect around 500-1000 recording samples.
 * Train on a classifier of your liking. SVM and knn seems to work better than other classifiers.
 * Click on `Train`
 
@@ -66,11 +66,6 @@ Copy chrome driver and paste it in the root directory of the project named `chro
 * [chrome_dino](https://pypi.org/project/gym-chrome-dino/) 
 * [wekinator](http://www.wekinator.org/downloads/)
 
-
-
-## License
-
-Feel free to build on this, but beware if you are copying this for your academic assignments. It is always better to learn from assignments than to burn! 🔥
 
 ## Acknowledgments
 
