@@ -1,6 +1,6 @@
-# TrexWeki
-🦖
+# TrexWeki 🦖
 
+![Alt text](https://github.com/CUBoulder-2019Sp-IML4HCI/TrexWeki/blob/master/results/trex_auto.gif)
 This project concentrates on using wekinator utilizing `Python-OSC` to develop a game engine that works on a few supervised examples. [Wekinator](http://www.wekinator.org/) is a free, open-source project created by [Rebecca Fiebrink](https://www.doc.gold.ac.uk/~mas01rf/homepage/) a machine learning engine for interactive system that utilizes ports as communication channel.
 
 This is undertaken as a part of course assignment for CSCI 5880 under the guidance of [Ben Shapiro](https://www.colorado.edu/atlas/ben-shapiro)
@@ -39,27 +39,19 @@ pip install -r requirements.txt
 Copy chrome driver and paste it in the root directory of the project named `chromedriver`.
 
 ### How to run already existing model
-* Open wekinator and open an existing project. Select `project-dir` from the data directory of the project.
+* Open wekinator and open an existing project. Select `MyTrex2/MyTrex2.wekproj` from the data directory of the project.
 * In your terminal, with root directory of the project `python dino_gym.py`.
 * In another terminal, with root directory of the project `python output_keyboard_event.py`.
 * In wekinator, click on run. 
 * Get ☕️ and see the dino play for you.
 
 ### How to train your model
-* Open wekinator and open an existing project. Select `project-dir` from the data directory of the project.
+* Open wekinator and open an existing project. Select `MyTrex2/MyTrex2.wekproj` from the data directory of the project.
 * In your terminal, with root directory of the project `python dino_gym.py`.
 * In wekinator, click on `Start Recording`
 * Collect around 500 $\pm$ 50  recording samples.
 * Train on a classifier of your liking. SVM and knn seems to work better than other classifiers.
 * Click on `Train`
-
-### Description
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 
 ## Built With
