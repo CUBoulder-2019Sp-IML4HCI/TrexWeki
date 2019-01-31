@@ -57,6 +57,9 @@ Copy chrome driver and paste it in the root directory of the project named `chro
 * Train on a classifier of your liking. SVM and knn seems to work better than other classifiers.
 * Click on `Train`
 
+## Architecture
+
+![Alt text](https://github.com/CUBoulder-2019Sp-IML4HCI/TrexWeki/blob/master/results/flow.png)
 
 ## Built With
 
