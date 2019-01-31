@@ -1,0 +1,8 @@
+gym==0.10.9
+-e git+https://github.com/elvisyjlin/gym-chrome-dino.git@c8a10dbec6996abe0ad69ca7e8c24cf507f0d7fc#egg=gym_chrome_dino
+pynput==1.4
+python-osc==1.7.0
+scikit-image==0.14.1
+scikit-learn==0.20.1
+scipy==1.1.0
+selenium==3.141.0
