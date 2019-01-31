@@ -25,6 +25,7 @@ These instructions will get you a copy of the project up and running on your loc
     * [pynput](https://pypi.org/project/pynput/) : handling keyboard inputs
     * [sklearn](https://scikit-learn.org/stable/) : extracting features
     * Selenium driver for chrome browser : Varies based on OS. Copy chrome driver and paste it in the root directory of the project named `chromedriver`
+=======
 
 ### Installing
 
