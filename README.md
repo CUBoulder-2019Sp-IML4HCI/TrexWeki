@@ -5,6 +5,8 @@ This project concentrates on using wekinator utilizing `Python-OSC` to develop a
 
 This is undertaken as a part of course assignment for CSCI 5880 under the guidance of [Ben Shapiro](https://www.colorado.edu/atlas/ben-shapiro)
 
+ [video]()
+
 ## Getting Started
 
 To utilize this repository, clone the repository in your machine. Also make sure you have the following prerequirements settled.
@@ -39,14 +41,14 @@ pip install -r requirements.txt
 Copy chrome driver and paste it in the root directory of the project named `chromedriver`.
 
 ### How to run already existing model
-* Open wekinator and open an existing project. Select `MyTrex2/MyTrex2.wekproj` from the data directory of the project.
+* Open wekinator and open an existing project. Select `data/bestmodel/MyTrex2.wekproj` from the data directory of the project.
 * In your terminal, with root directory of the project `python dino_gym.py`.
 * In another terminal, with root directory of the project `python output_keyboard_event.py`.
 * In wekinator, click on run. 
 * Get ☕️ and see the dino play for you.
 
 ### How to train your model
-* Open wekinator and open an existing project. Select `MyTrex2/MyTrex2.wekproj` from the data directory of the project.
+* Open wekinator and open an existing project. Select `data/bestmodel/MyTrex2.wekproj` from the data directory of the project.
 * In your terminal, with root directory of the project `python dino_gym.py`.
 * In wekinator, click on `Start Recording`
 * Collect around 500 $\pm$ 50  recording samples.
@@ -56,8 +58,8 @@ Copy chrome driver and paste it in the root directory of the project named `chro
 
 ## Built With
 
-* [chrome_dino](https://pypi.org/project/gym-chrome-dino/) - The web framework used
-* [wekinator](http://www.wekinator.org/downloads/) - Dependency Management
+* [chrome_dino](https://pypi.org/project/gym-chrome-dino/) 
+* [wekinator](http://www.wekinator.org/downloads/)
 
 
 
