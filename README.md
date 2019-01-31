@@ -7,7 +7,7 @@ This project concentrates on using wekinator utilizing `Python-OSC` to develop a
 
 This is undertaken as a part of course assignment for CSCI 5880 under the guidance of [Ben Shapiro](https://www.colorado.edu/atlas/ben-shapiro)
 
- [video]()
+ [video](https://www.youtube.com/watch?v=J0dqglfylI4&feature=youtu.be)
 
 ## Getting Started
 
