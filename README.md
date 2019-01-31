@@ -1,6 +1,8 @@
 # TrexWeki 🦖
 
 ![Alt text](https://github.com/CUBoulder-2019Sp-IML4HCI/TrexWeki/blob/master/results/trex_auto.gif)
+
+
 This project concentrates on using wekinator utilizing `Python-OSC` to develop a game engine that works on a few supervised examples. [Wekinator](http://www.wekinator.org/) is a free, open-source project created by [Rebecca Fiebrink](https://www.doc.gold.ac.uk/~mas01rf/homepage/) a machine learning engine for interactive system that utilizes ports as communication channel.
 
 This is undertaken as a part of course assignment for CSCI 5880 under the guidance of [Ben Shapiro](https://www.colorado.edu/atlas/ben-shapiro)
